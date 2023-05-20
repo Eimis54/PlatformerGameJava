@@ -8,8 +8,8 @@ public class Constants {
 
     public static class EnemyConstants{
         public static final int ZOMBIE = 27;
-        public static final int RUNNING = 0;
-        public static final int IDLE = 1;
+        public static final int IDLE = 0;
+        public static final int RUNNING = 1;
         public static final int ATTACK = 2;
         public static final int HIT = 3;
         public static final int DEAD = 4;
@@ -20,8 +20,8 @@ public class Constants {
         public static final int ZOMBIE_WIDTH = (int)(ZOMBIE_WIDTH_DEFAULT *Game.SCALE);
         public static final int ZOMBIE_HEIGHT = (int)(ZOMBIE_HEIGHT_DEFAULT *Game.SCALE);
 
-        public static final int ZOMBIE_DRAWOFFSET_X = (int)(26*Game.SCALE);
-        public static final int ZOMBIE_DRAWOFFSET_Y = (int)(9*Game.SCALE);
+        public static final int ZOMBIE_DRAWOFFSET_X = (int)(20*Game.SCALE);
+        public static final int ZOMBIE_DRAWOFFSET_Y = (int)(0.05*Game.SCALE);
 
 
         public static int GetSpriteAmount(int enemy_type, int enemy_state) {

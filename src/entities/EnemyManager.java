@@ -25,9 +25,9 @@ public class EnemyManager {
         System.out.println("size of zombies: " + zombies.size());
     }
 
-    public void update(int[][] lvlData){
+    public void update(int[][] lvlData, Player player){
         for(Zombie c : zombies)
-            c.update(lvlData);
+            c.update(lvlData, player);
     }
     public void draw(Graphics g, int xLvlOffset){
         drawZombies(g, xLvlOffset);
@@ -35,7 +35,8 @@ public class EnemyManager {
 
     private void drawZombies(Graphics g, int xLvlOffset) {
         for (Zombie c : zombies)
-            g.drawImage(zombieArray[c.getEnemyState()][c.getAniIndex()],(int) c.getHitbox().x - xLvlOffset,(int) c.getHitbox().y, ZOMBIE_WIDTH, ZOMBIE_HEIGHT,null);
+            g.drawImage(zombieArray[c.getEnemyState()][c.getAniIndex()],(int) c.getHitbox().x - xLvlOffset - ZOMBIE_DRAWOFFSET_X,(int) c.getHitbox().y - ZOMBIE_DRAWOFFSET_Y, ZOMBIE_WIDTH, ZOMBIE_HEIGHT,null);
+        //            c.drawHitbox(g, xLvlOffset);
     }
 
     private void loadEnemyImgs() {
