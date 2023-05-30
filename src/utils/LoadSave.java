@@ -28,6 +28,8 @@ public class LoadSave {
     public static final String CLOUDS = "clouds.png";
 //    public static final String ENEMY_SPRITE = "enemy.png";
     public static final String ENEMY_SPRITE = "crabby_sprite.png";
+    public static final String STATUS_BAR = "health_power_bar.png";
+
 
 
 
